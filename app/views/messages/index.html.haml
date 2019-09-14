@@ -1,5 +1,6 @@
 %body
   .flash-box
+    .notice グループを作成しました
   .wrapper
     .chat-side
       .side-header
@@ -13,49 +14,19 @@
               %a{:href => "/users/705/edit"}
                 %i.fa.fa-cog
       .groups
-        %a{:href => "/groups/1317/messages"}
+        %a{:href => "/groups/1341/messages"}
           .group
-            %p.group__group-name sass
-            %p.group__latest-message hofgggggg
+            %p.group__group-name test
+            %p.group__latest-message まだメッセージがありません
+        %a{:href => "/groups/1237/messages"}
+          .group
+            %p.group__group-name 宣戦布告
+            %p.group__latest-message テスト
         %a{:href => "/groups/1318/messages"}
           .group
             %p.group__group-name test
             %p.group__latest-message まだメッセージがありません
-    .chat-main
-      .main-header
-        .main-header__left-box
-          %h2.main-header__left-box__current-group{"data-group_id" => "1317"}
-            sass
-          %ul.main-header__left-box__member-list
-            Member：
-            %li.main-header__left-box__member-list__member akane
-        %a{:href => "/groups/1317/edit"}
-          .main-header__edit-btn Edit
-      .messages
-        .message{"data-message_id" => "2741"}
-          .message__upper-info
-            %p.message__upper-info__talker akane
-            %p.message__upper-info__date 2019/09/14(Sat) 15:14:41
-          %p.message__text hofgggggg
-        .message{"data-message_id" => "2742"}
-          .message__upper-info
-            %p.message__upper-info__talker akane
-            %p.message__upper-info__date 2019/09/14(Sat) 15:15:12
-          %p.message__text
-          %img{:alt => "Shibe", :src => "/uploads/message/image/2742/shibe.jpg"}/
-        .message{"data-message_id" => "2755"}
-          .message__upper-info
-            %p.message__upper-info__talker akane
-            %p.message__upper-info__date 2019/09/14(Sat) 15:35:14
-          %p.message__text
-          %img{:alt => "%e4%bb%95%e6%a7%98%e6%9b%b81", :src => "/uploads/message/image/2755/%E4%BB%95%E6%A7%98%E6%9B%B81.png"}/
-      .form
-        %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1317/messages", :enctype => "multipart/form-data", :method => "post"}
-          %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-          %input{:name => "authenticity_token", :type => "hidden", :value => "6b4PkNwWkA9K91jLBr+9SoafglIzWm7QpJk6C20bUfUu0ClMQ4974Zy8YxDz6eBJ5y7qdVYY2BQtI0qisJ4b8g=="}/
-          .input-box
-            %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-            %label.input-box__image{:for => "message_image"}
-              %i.fa.fa-image
-              %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-          %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+        %a{:href => "/groups/1317/messages"}
+          .group
+            %p.group__group-name sass
+            %p.group__latest-message hofgggggg

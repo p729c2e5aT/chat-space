@@ -1,15 +1,62 @@
-.flash-box {
+.flash-box{
   background-color:#38AEF0;
-  .notice {
+  .notice{
     text-align:center;
     color:#fff;
   }
 }
 
-.chat-side {
-  background-color:#2f3e51;
+.chat-side{
+  color:white;
   float:left;
-  height:100vh;
   width:300px;
-  
+  .side-header{
+    background-color:#253141;
+    display:flex;
+    height: 100px;
+    padding: 0 20px;
+    &__box{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+      font-size:16px;
+      &__menu{
+        display:flex;
+      }
+    }
+  }
+  .groups {
+    background-color:#2f3e51;
+    height:calc(100vh - 100px);
+    padding:20px 20px 0;
+
+  }
+}
+
+.chat-main{
+  background-color:#fafafa;
+  height:100vh;
+  width:calc(100vw - 300px);
+  float: right;
+  &__main-header{
+    height:100px;
+    padding: 0 40px;
+    display:flex;
+    border-bottom: solid 2px #eee; 
+  }
+  &__form{
+    height: 90px;
+    padding: 20px 40px;
+    background-color: #ddd;
+  }
+}
+
+p {
+  color:#fff;
+}
+
+ul, ol {
+  list-style:none;
+
 }

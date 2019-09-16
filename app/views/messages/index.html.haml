@@ -54,7 +54,7 @@
 
     .form
       %form
-        %input.form__message
+        %input.form__message{name: "message[content]", placeholder:  "type a message", type: "text"}
         .form__box
           %label.input-box__image
             = fa_icon "image"

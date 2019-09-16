@@ -40,6 +40,7 @@
     padding:46px 40px;
     background-color:#fafafa;
     overflow:scroll;
+    color:#434a54;
     .message{
       margin-bottom:40px;
       &__upper-info{
@@ -73,6 +74,7 @@
       float:left;
       height:50px;
       width:calc(100% - 150px);
+      font-size:16px;
     }
     &__box{
       background-color:$white;

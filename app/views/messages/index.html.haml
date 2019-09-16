@@ -8,11 +8,11 @@
           %p.side-header__box__user-name akane
           %ul.side-header__box__menu
             %li.side-header__box__menu__new-group
-              %a{:href => "/groups/new"}
-                %i.fa.fa-edit
+              %link_to{:href => "/groups/new"}
+                = fa_icon 'edit'
             %li.side-header__box__menu__edit-user
-              %a{:href => "/users/705/edit"}
-                %i.fa.fa-cog
+              %link_to{:href => "/users/705/edit"}
+                = fa_icon 'cog' 
       .groups
         %a{:href => "/groups/1341/messages"}
           .group
@@ -34,13 +34,18 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group{"data-group_id" => "1344"}
-          にゃんゴロー
+          猫ジロー
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member akane
       %a{:href => "/groups/1344/edit"}
         .main-header__edit-btn Edit
     .messages
+      .message{"data-message_id" => "2542"}
+        .message__upper-info
+          %p.message__upper-info__talker おおお
+          %p.message__upper-info__date 2019/09/12(Thu) 21:34:55
+        %p.message__text テスト
     .form
       %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1344/messages", :enctype => "multipart/form-data", :method => "post"}
         %input{:name => "utf8", :type => "hidden", :value => "✓"}/
@@ -48,6 +53,6 @@
         .input-box
           %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
           %label.input-box__image{:for => "message_image"}
-            %i.fa.fa-image
+            = fa_icon 'image' 
             %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
         %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/

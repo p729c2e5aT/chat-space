@@ -8,25 +8,31 @@
           %p.side-header__box__user-name akane
           %ul.side-header__box__menu
             %li.side-header__box__menu__new-group
-              %link_to{:href => "/groups/new"}
+              -# TODO: 新規グループページ作成後、リンク訂正。
+              %link_to{http: "groups/new"}
                 = fa_icon 'edit'
             %li.side-header__box__menu__edit-user
-              %link_to{:href => "/users/705/edit"}
+              -# TODO: アカウント編集ページ作成後、リンク訂正。
+              %link_to{http: "/users/705/edit"}
                 = fa_icon 'cog' 
       .groups
-        %a{:href => "/groups/1341/messages"}
+        -# TODO:グループ作成後、訂正。
+        %link_to{http: "/groups/1341/messages"}
           .group
             %p.group__group-name test
             %p.group__latest-message まだメッセージがありません
-        %a{:href => "/groups/1237/messages"}
+        -# TODO:グループ作成後、訂正  
+        %link_to{http: "/groups/1237/messages"}
           .group
             %p.group__group-name テストテスト
             %p.group__latest-message テスト
-        %a{:href => "/groups/1318/messages"}
+        -# TODO:グループ作成後、訂正
+        %link_to{http: "/groups/1318/messages"}
           .group
             %p.group__group-name test
             %p.group__latest-message まだメッセージがありません
-        %a{:href => "/groups/1317/messages"}
+        -# TODO:グループ作成後、訂正
+        %link_to{http: "/groups/1317/messages"}
           .group
             %p.group__group-name sass
             %p.group__latest-message hofgggggg
@@ -38,7 +44,8 @@
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member akane
-      %a{:href => "/groups/1344/edit"}
+      -# TODO:グループ作成後、訂正
+      %link_to{http: "/groups/1344/edit"}
         .main-header__edit-btn Edit
     .messages
       .message{"data-message_id" => "600"}

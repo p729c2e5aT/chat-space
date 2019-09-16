@@ -1,9 +1,9 @@
 .chat-side{
-  color:white;
+  color: $white;
   float:left;
   width:300px;
   .side-header{
-    background-color:#253141;
+    background-color: $side_blue_dark;
     display:flex;
     height:100px;
     padding:0 20px;
@@ -22,18 +22,18 @@
     }
   }
   .groups{
-    background-color:#2f3e51;
+    background-color: $side_blue_light;
     height:calc(100vh - 100px);
-    padding:20px 20px 0;
+    padding:0 20px;
     overflow:scroll;
     .group{
-      margin-bottom: 40px;
+      padding:20px 0 40px;
       &__group-name{
-      font-size:15px;
+      font-size: $side_group_name;
       margin-bottom:5px;
       }
       &__latest-message{
-      font-size:11px;
+      font-size: $side_group_message;
       }
     }
   }

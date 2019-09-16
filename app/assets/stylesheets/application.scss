@@ -1,6 +1,9 @@
-@import "./reset";
-@import "./variable";
 @import "font-awesome";
-@import "./index";
-@import "./flash-box";
-@import "./chat-side";
+@import "config/colors";
+@import "config/font-size";
+@import "config/reset";
+@import "mixins/vender_prefix";
+@import "chat-speace/flash-box";
+@import "chat-speace/chat-side";
+@import "chat-speace/chat-main";
+

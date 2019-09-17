@@ -12,7 +12,7 @@
               %link_to{http: "groups/new"}
                 = fa_icon 'edit'
             %li.side-header__box__menu__edit-user
-              -# TODO: アカウント編集ページ作成後、リンク訂正。
+              -#TODO: アカウント編集ページ作成後、リンク訂正。
               %link_to{http: "/users/705/edit"}
                 = fa_icon 'cog' 
       .groups
@@ -39,7 +39,7 @@
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group{"data-group_id" => "1344"}
+        %h2.main-header__left-box__current-group{data:{group_id: "1344"}}
           柴犬の集い
         %ul.main-header__left-box__member-list
           Member：
@@ -48,12 +48,12 @@
       %link_to{http: "/groups/1344/edit"}
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id" => "600"}
+      .message{data:{message_id: "600"}}
         .message__upper-info
           %p.message__upper-info__talker 茶柴
           %p.message__upper-info__date 2019/09/12(Thu) 21:34:55
         %p.message__text 散歩したい散歩したい散歩したい
-      .message{"data-message_id" => "2542"}
+      .message{data:{message_id: "2542"}}
         .message__upper-info
           %p.message__upper-info__talker 飼い主
           %p.message__upper-info__date 2019/09/12(Thu) 21:45：56

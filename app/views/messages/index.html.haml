@@ -1,20 +1,18 @@
 %body
-  .flash-box
-    .notice グループを作成しました
   .wrapper
     .chat-side
       .side-header
         .side-header__box
-          %p.side-header__box__user-name akane
+          %p.side-header__box__user-name 
+            = current_user.name
           %ul.side-header__box__menu
             %li.side-header__box__menu__new-group
               -# TODO: 新規グループページ作成後、リンク訂正。
               %link_to{http: "groups/new"}
-                = fa_icon 'edit'
+              = fa_icon 'edit'
             %li.side-header__box__menu__edit-user
-              -#TODO: アカウント編集ページ作成後、リンク訂正。
-              %link_to{http: "/users/705/edit"}
-                = fa_icon 'cog' 
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon' 
       .groups
         -# TODO:グループ作成後、訂正。
         %link_to{http: "/groups/1341/messages"}

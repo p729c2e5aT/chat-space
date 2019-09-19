@@ -1,7 +1,5 @@
 .wrapper
-
   = render '/side_bar'
-
   .chat-main
     .main-header
       .main-header__left-box
@@ -9,26 +7,16 @@
           柴犬の集い
         %ul.main-header__left-box__member-list
           Member：
-        %li.main-header__left-box__member-list__member akane
+        %li.main-header__left-box__member-list__member 
       = link_to edit_group_path(current_user) do
         .main-header__edit-btn Edit
     .messages
-      .message{data:{message_id: "600"}}
-        .message__upper-info
-          %p.message__upper-info__talker 茶柴
-          %p.message__upper-info__date 2019/09/12(Thu) 21:34:55
-        %p.message__text 散歩したい散歩したい散歩したい
-      .message{data:{message_id: "2542"}}
-        .message__upper-info
-          %p.message__upper-info__talker 飼い主
-          %p.message__upper-info__date 2019/09/12(Thu) 21:45：56
-        %p.message__text 散歩は明日な
-
+      = render partial: 'message', collection: @messages
     .form
-      %form
-        %input.form__message{name: "message[content]", placeholder:  "type a message", type: "text"}
-        .form__box
-          %label.input-box__image
-            = fa_icon "image"
-            %input.hidden{type: "file"}
-        %input.form__submit{ type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

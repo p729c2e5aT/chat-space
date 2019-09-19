@@ -27,13 +27,16 @@
     padding:0 20px;
     overflow:scroll;
     .group{
+      box-sizing: border-box;
       padding:20px 0 40px;
+
       &__group-name{
       font-size: $side_group_name;
       margin-bottom:5px;
       }
       &__latest-message{
       font-size: $side_group_message;
+      margin-bottom:40px;
       }
     }
   }

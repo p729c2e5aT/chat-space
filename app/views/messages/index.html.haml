@@ -1,41 +1,7 @@
-%body
-  .flash-box
-    .notice グループを作成しました
-  .wrapper
-    .chat-side
-      .side-header
-        .side-header__box
-          %p.side-header__box__user-name akane
-          %ul.side-header__box__menu
-            %li.side-header__box__menu__new-group
-              -# TODO: 新規グループページ作成後、リンク訂正。
-              %link_to{http: "groups/new"}
-                = fa_icon 'edit'
-            %li.side-header__box__menu__edit-user
-              -#TODO: アカウント編集ページ作成後、リンク訂正。
-              %link_to{http: "/users/705/edit"}
-                = fa_icon 'cog' 
-      .groups
-        -# TODO:グループ作成後、訂正。
-        %link_to{http: "/groups/1341/messages"}
-          .group
-            %p.group__group-name test
-            %p.group__latest-message まだメッセージがありません
-        -# TODO:グループ作成後、訂正  
-        %link_to{http: "/groups/1237/messages"}
-          .group
-            %p.group__group-name テストテスト
-            %p.group__latest-message テスト
-        -# TODO:グループ作成後、訂正
-        %link_to{http: "/groups/1318/messages"}
-          .group
-            %p.group__group-name test
-            %p.group__latest-message まだメッセージがありません
-        -# TODO:グループ作成後、訂正
-        %link_to{http: "/groups/1317/messages"}
-          .group
-            %p.group__group-name sass
-            %p.group__latest-message hofgggggg
+.wrapper
+
+  = render '/side_bar'
+
   .chat-main
     .main-header
       .main-header__left-box
@@ -43,9 +9,8 @@
           柴犬の集い
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member akane
-      -# TODO:グループ作成後、訂正
-      %link_to{http: "/groups/1344/edit"}
+        %li.main-header__left-box__member-list__member akane
+      = link_to edit_group_path(current_user) do
         .main-header__edit-btn Edit
     .messages
       .message{data:{message_id: "600"}}

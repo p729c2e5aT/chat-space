@@ -7,7 +7,6 @@
     display:flex;
     justify-content: space-between;
     border-bottom: solid 1px #eee;
-    overflow:scroll;
     &__edit-btn{
       height: 80px;
       line-height:40px;
@@ -41,6 +40,7 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100vh - 190px);
+    overflow: scroll;
     .message {
       .upper-message {
         display: flex;

@@ -3,15 +3,17 @@
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group{data:{group_id: "1344"}}
-          柴犬の集い
-        %ul.main-header__left-box__member-list
-          Member：
-        %li.main-header__left-box__member-list__member 
+        %h2.main-header__left-box__current-group{data:{group_id: ""}}
+          
+        %ul.main-header__left-box__member-list 
+          %li.main-header__left-box__member-list__member 
+            -# TOTO訂正予定箇所
+            -# - @messages.each do |message|
+            -#   = message.user.name
       = link_to edit_group_path(current_user) do
         .main-header__edit-btn Edit
     .messages
-      = render partial: 'message', collection: @messages
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'

@@ -7,7 +7,6 @@
     display:flex;
     justify-content: space-between;
     border-bottom: solid 1px #eee;
-    overflow:scroll;
     &__edit-btn{
       height: 80px;
       line-height:40px;
@@ -35,37 +34,38 @@
     & a{
       color:#38aef0;
     }
-
   }
-  .messages{
-    height:calc(100vh -  283px);
-    padding:46px 40px;
-    background-color:#fafafa;
-    overflow:scroll;
-    color:#434a54;
-    .message{
-      margin-bottom:40px;
-      &__upper-info{
-        display:flex;
-        margin-bottom:10px;
-        &__talker{
-          color:#434a54;
-          font-size:16px;
-          font-weight:bold;
+  .messages {
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100vh - 190px);
+    overflow: scroll;
+    .message {
+      .upper-message {
+        display: flex;
+        &__user-name {
+          color: $black;
+          font-size: 16px;
+          font-weight: bold;
         }
-        &__date{
-          color:#999;
-          font-size:12px;
-          margin-left:10px;
+        &__date {
+          color: $light_gray;
+          font-size: 12px;
+          padding-left: 10px;
         }
       }
-      &__text{
-        color:#434a54;
-        font-size:14px;
-        margin-bottom:10px;
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: $black;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
       }
     }
   }
+
   .form{
     background-color:#DDD;
     box-sizing:border-box; 
@@ -78,7 +78,7 @@
       width:calc(100% - 150px);
       font-size:16px;
     }
-    &__box{
+    &__mask{
       background-color:$white;
       float:left;
       height:50px;

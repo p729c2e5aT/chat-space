@@ -4,12 +4,11 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group{data:{group_id: ""}}
-          
+        = @group.name
         %ul.main-header__left-box__member-list 
           %li.main-header__left-box__member-list__member 
-            -# TOTO訂正予定箇所
-            -# - @messages.each do |message|
-            -#   = message.user.name
+        - @group.users.each do |user|
+          = user.name
       = link_to edit_group_path(current_user) do
         .main-header__edit-btn Edit
     .messages

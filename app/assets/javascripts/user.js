@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function(){
 
   var search_list = $("#user-search-result");
   var member_list = $(".js-add-user");
-  // $("#chat-group-users");
+
   function appendUser(name,id){
       var html =
                   `<div class='chat-group-user clearfix'>
@@ -20,6 +20,7 @@ $(document).on('turbolinks:load', function(){
                   </div>`;
                   search_list.append(html);
   }
+
   function addUser(name,id){
     var html =
                 `<div class='chat-group-user clearfix'>
@@ -40,9 +41,9 @@ $(document).on('turbolinks:load', function(){
         dataType: 'json'
     })
 
-    .done(function(users){                // usersにjson形式のuser変数が代入される。複数形なので配列型で入ってくる
+    .done(function(users){ 
 
-        if (input.length !== 0){     // 値が等しくないもしくは型が等しくなければtrueを返す。
+        if (input.length !== 0){     
           $('#user-search-result').empty();
           users.forEach(function(user){ // users情報をひとつずつとりだしてuserに代入
             appendUser(user.name, user.id)
@@ -61,7 +62,7 @@ $(document).on('turbolinks:load', function(){
   });
 
 
-  
+
   $('#user-search-result').on('click', '.user-search-add', function(){
     var name = $(this).data("user-name");
     var id =$(this).data("user-id");

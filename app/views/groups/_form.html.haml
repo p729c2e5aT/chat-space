@@ -30,13 +30,6 @@
             = current_user.name
         .member_list
           = render partial: "groups/user", collection: @group.users.where.not(id: current_user)
-        -# -@group.users.each do |user|
-        -#   -if current_user.name != user.name 
-        -#     .chat-group-user.clearfix.js-chat-member
-        -#       %input{name: "group[user_ids][]", type: "hidden", value: user.id}/
-        -#       .chat-group-user--name
-        -#         = user.name
-              
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left

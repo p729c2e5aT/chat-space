@@ -13,10 +13,17 @@
       justify-content:space-between;
       width: 100%;
       font-weight: bold;
+      &__user-name{
+        color: #fff;
+      }
       &__menu{
         display:flex;
+        &__edit-user{
+          margin-right:0.3rem;
+        }
         &__new-group{
           margin-right:0.5rem;
+          
         }
       }
     }
@@ -32,7 +39,7 @@
 
       &__group-name{
       font-size: $side_group_name;
-      margin-bottom:5px;
+      margin-top:20px;
       }
       &__latest-message{
       font-size: $side_group_message;

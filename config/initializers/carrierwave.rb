@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'sibuyamikan'
-  config.asset_host = 'https://ap-northeast-1.amazonaws.com/sibuyamikan'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/sibuyamikan'
 end
